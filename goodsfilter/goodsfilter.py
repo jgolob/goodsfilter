@@ -96,7 +96,7 @@ def main():
         
         if sp_goods_threshold is not None:
             goods_converged[specimen] = True
-            filtered_counts[specimen] = [c if c >= sp_goods_threshold else 0 for c in sp_counts]
+            filtered_counts[specimen] = [c if c >= (sp_goods_threshold / 4) else 0 for c in sp_counts]
         else:
             goods_converged[specimen] = False
             filtered_counts[specimen] = sp_counts
